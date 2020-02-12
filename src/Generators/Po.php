@@ -1,8 +1,8 @@
 <?php
 
-namespace GettextEasyRxCustom\Generators;
+namespace GettextEasyRxCustom\EasryRxCustomGenerators;
 
-use GettextEasyRxCustom\Translations;
+use GettextEasyRxCustom\EasryRxCustomTranslations;
 
 class Po extends Generator implements GeneratorInterface
 {
@@ -13,7 +13,7 @@ class Po extends Generator implements GeneratorInterface
     /**
      * {@parentDoc}.
      */
-    public static function toString(Translations $translations, array $options = [])
+    public static function toString(EasyRxCustomTranslations $translations, array $options = [])
     {
         $options += static::$options;
 

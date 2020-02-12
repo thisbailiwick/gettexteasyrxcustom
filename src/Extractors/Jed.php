@@ -1,8 +1,8 @@
 <?php
 
-namespace GettextEasyRxCustom\Extractors;
+namespace GettextEasyRxCustom\EasryRxCustomExtractors;
 
-use GettextEasyRxCustom\Translations;
+use GettextEasyRxCustom\EasryRxCustomTranslations;
 
 /**
  * Class to get gettext strings from json files.
@@ -12,7 +12,7 @@ class Jed extends Extractor implements ExtractorInterface
     /**
      * {@inheritdoc}
      */
-    public static function fromString($string, Translations $translations, array $options = [])
+    public static function fromString($string, EasyRxCustomTranslations $translations, array $options = [])
     {
         static::extract(json_decode($string, true), $translations);
     }
@@ -21,9 +21,9 @@ class Jed extends Extractor implements ExtractorInterface
      * Handle an array of translations and append to the Translations instance.
      *
      * @param array        $content
-     * @param Translations $translations
+     * @param EasyRxCustomTranslations $translations
      */
-    public static function extract(array $content, Translations $translations)
+    public static function extract(array $content, EasyRxCustomTranslations $translations)
     {
         $messages = current($content);
         $headers = isset($messages['']) ? $messages[''] : null;

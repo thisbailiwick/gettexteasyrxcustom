@@ -2,7 +2,7 @@
 
 namespace GettextEasyRxCustom;
 
-abstract class BaseTranslator implements TranslatorInterface
+abstract class EasyRxCustomBaseTranslator implements TranslatorInterface
 {
     /** @var TranslatorInterface */
     public static $current;

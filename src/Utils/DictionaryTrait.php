@@ -1,8 +1,8 @@
 <?php
 
-namespace GettextEasyRxCustom\Utils;
+namespace GettextEasyRxCustom\EasryRxCustomUtils;
 
-use GettextEasyRxCustom\Translations;
+use GettextEasyRxCustom\EasryRxCustomTranslations;
 
 /**
  * Trait used by all generators that exports the translations to plain dictionary (original => singular-translation).
@@ -15,12 +15,12 @@ trait DictionaryTrait
     /**
      * Returns a plain dictionary with the format [original => translation].
      *
-     * @param Translations $translations
+     * @param EasyRxCustomTranslations $translations
      * @param bool         $includeHeaders
      *
      * @return array
      */
-    protected static function toArray(Translations $translations, $includeHeaders)
+    protected static function toArray(EasyRxCustomTranslations $translations, $includeHeaders)
     {
         $messages = [];
 
@@ -43,9 +43,9 @@ trait DictionaryTrait
      * Extract the entries from a dictionary.
      *
      * @param array        $messages
-     * @param Translations $translations
+     * @param EasyRxCustomTranslations $translations
      */
-    protected static function fromArray(array $messages, Translations $translations)
+    protected static function fromArray(array $messages, EasyRxCustomTranslations $translations)
     {
         foreach ($messages as $original => $translation) {
             if ($original === '') {

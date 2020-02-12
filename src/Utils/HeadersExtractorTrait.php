@@ -1,8 +1,8 @@
 <?php
 
-namespace GettextEasyRxCustom\Utils;
+namespace GettextEasyRxCustom\EasryRxCustomUtils;
 
-use GettextEasyRxCustom\Translations;
+use GettextEasyRxCustom\EasryRxCustomTranslations;
 
 /**
  * Trait to provide the functionality of extracting headers.
@@ -13,11 +13,11 @@ trait HeadersExtractorTrait
      * Add the headers found to the translations instance.
      *
      * @param string       $headers
-     * @param Translations $translations
+     * @param EasyRxCustomTranslations $translations
      *
      * @return array
      */
-    protected static function extractHeaders($headers, Translations $translations)
+    protected static function extractHeaders($headers, EasyRxCustomTranslations $translations)
     {
         $headers = explode("\n", $headers);
         $currentHeader = null;

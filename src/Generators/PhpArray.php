@@ -1,9 +1,9 @@
 <?php
 
-namespace GettextEasyRxCustom\Generators;
+namespace GettextEasyRxCustom\EasryRxCustomGenerators;
 
-use GettextEasyRxCustom\Translations;
-use GettextEasyRxCustom\Utils\MultidimensionalArrayTrait;
+use GettextEasyRxCustom\EasryRxCustomTranslations;
+use GettextEasyRxCustom\EasryRxCustomUtils\MultidimensionalArrayTrait;
 
 class PhpArray extends Generator implements GeneratorInterface
 {
@@ -16,7 +16,7 @@ class PhpArray extends Generator implements GeneratorInterface
     /**
      * {@inheritdoc}
      */
-    public static function toString(Translations $translations, array $options = [])
+    public static function toString(EasyRxCustomTranslations $translations, array $options = [])
     {
         $array = static::generate($translations, $options);
 
@@ -26,12 +26,12 @@ class PhpArray extends Generator implements GeneratorInterface
     /**
      * Generates an array with the translations.
      *
-     * @param Translations $translations
+     * @param EasyRxCustomTranslations $translations
      * @param array        $options
      *
      * @return array
      */
-    public static function generate(Translations $translations, array $options = [])
+    public static function generate(EasyRxCustomTranslations $translations, array $options = [])
     {
         $options += static::$options;
 

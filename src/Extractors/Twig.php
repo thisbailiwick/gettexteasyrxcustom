@@ -1,8 +1,8 @@
 <?php
 
-namespace GettextEasyRxCustom\Extractors;
+namespace GettextEasyRxCustom\EasryRxCustomExtractors;
 
-use GettextEasyRxCustom\Translations;
+use GettextEasyRxCustom\EasryRxCustomTranslations;
 use Twig_Loader_Array;
 use Twig_Environment;
 use Twig_Source;
@@ -21,7 +21,7 @@ class Twig extends Extractor implements ExtractorInterface
     /**
      * {@inheritdoc}
      */
-    public static function fromString($string, Translations $translations, array $options = [])
+    public static function fromString($string, EasyRxCustomTranslations $translations, array $options = [])
     {
         $options += static::$options;
 

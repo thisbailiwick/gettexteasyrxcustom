@@ -2,7 +2,7 @@
 
 namespace GettextEasyRxCustom;
 
-class GettextTranslator extends BaseTranslator implements TranslatorInterface
+class GettextTranslator extends EasyRxCustomBaseTranslator implements TranslatorInterface
 {
     /**
      * Constructor. Detects the current language using the environment variables.

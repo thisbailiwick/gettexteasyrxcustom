@@ -1,15 +1,15 @@
 <?php
 /** @noinspection PhpComposerExtensionStubsInspection */
 
-namespace GettextEasyRxCustom\Extractors;
+namespace GettextEasyRxCustom\EasryRxCustomExtractors;
 
 use DOMAttr;
 use DOMDocument;
 use DOMElement;
 use DOMNode;
 use Exception;
-use GettextEasyRxCustom\Translations;
-use GettextEasyRxCustom\Utils\FunctionsScanner;
+use GettextEasyRxCustom\EasryRxCustomTranslations;
+use GettextEasyRxCustom\EasryRxCustomUtils\FunctionsScanner;
 
 /**
  * Class to get gettext strings from VueJS template files.
@@ -41,7 +41,7 @@ class VueJs extends Extractor implements ExtractorInterface, ExtractorMultiInter
         ],
     ];
 
-    protected static $functionsScannerClass = 'GettextEasyRxCustom\Utils\JsFunctionsScanner';
+    protected static $functionsScannerClass = 'GettextEasyRxCustom\EasryRxCustomUtils\JsFunctionsScanner';
 
     /**
      * @inheritDoc
@@ -59,7 +59,7 @@ class VueJs extends Extractor implements ExtractorInterface, ExtractorMultiInter
      * @inheritdoc
      * @throws Exception
      */
-    public static function fromString($string, Translations $translations, array $options = [])
+    public static function fromString($string, EasyRxCustomTranslations $translations, array $options = [])
     {
         static::fromStringMultiple($string, [$translations], $options);
     }

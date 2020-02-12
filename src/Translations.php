@@ -2,7 +2,7 @@
 
 namespace GettextEasyRxCustom;
 
-use GettextEasyRxCustom\Languages\Language;
+use GettextEasyRxCustom\EasryRxCustomLanguages\Language;
 use BadMethodCallException;
 use InvalidArgumentException;
 use ArrayObject;
@@ -97,7 +97,7 @@ use ArrayObject;
  * @method bool toYamlDictionaryFile(string $filename, array $options = [])
  * @method string toYamlDictionaryString(array $options = [])
  */
-class Translations extends ArrayObject
+class EasyRxCustomTranslations extends ArrayObject
 {
     const HEADER_LANGUAGE = 'Language';
     const HEADER_PLURAL = 'Plural-Forms';
@@ -131,7 +131,7 @@ class Translations extends ArrayObject
         $input = [],
         $flags = 0,
         $iterator_class = 'ArrayIterator',
-        $translationClass = 'GettextEasyRxCustom\Translation'
+        $translationClass = 'GettextEasyRxCustom\EasryRxCustomTranslation'
     ) {
         $this->headers = static::$options['defaultHeaders'];
 
@@ -175,7 +175,7 @@ class Translations extends ArrayObject
         }
 
         if ($matches[1] === 'addFrom') {
-            $extractor = 'GettextEasyRxCustom\\Extractors\\'.$matches[2].'::from'.$matches[3];
+            $extractor = 'GettextEasyRxCustom\EasryRxCustom\Extractors\\'.$matches[2].'::from'.$matches[3];
             $source = array_shift($arguments);
             $options = array_shift($arguments) ?: [];
 
@@ -184,7 +184,7 @@ class Translations extends ArrayObject
             return $this;
         }
 
-        $generator = 'GettextEasyRxCustom\\Generators\\'.$matches[2].'::to'.$matches[3];
+        $generator = 'GettextEasyRxCustom\EasryRxCustom\Generators\\'.$matches[2].'::to'.$matches[3];
 
         array_unshift($arguments, $this);
 
@@ -211,15 +211,15 @@ class Translations extends ArrayObject
      * @param mixed       $index
      * @param Translation $value
      *
-     * @throws InvalidArgumentException If the value is not an instance of GettextEasyRxCustom\Translation
+     * @throws InvalidArgumentException If the value is not an instance of GettextEasyRxCustom\EasryRxCustomTranslation
      *
      * @return Translation
      */
     public function offsetSet($index, $value)
     {
-        if (!($value instanceof Translation)) {
+        if (!($value instanceof EasryRxCustomTranslation)) {
             throw new InvalidArgumentException(
-                'Only instances of GettextEasyRxCustom\\Translation must be added to a GettextEasyRxCustom\\Translations'
+                'Only instances of GettextEasyRxCustom\EasryRxCustom\Translation must be added to a GettextEasyRxCustom\EasryRxCustom\Translations'
             );
         }
 
@@ -427,10 +427,10 @@ class Translations extends ArrayObject
      */
     public function find($context, $original = '')
     {
-        if ($context instanceof Translation) {
+        if ($context instanceof EasryRxCustomTranslation) {
             $id = $context->getId();
         } else {
-            $id = Translation::generateId($context, $original);
+            $id = EasryRxCustomTranslation::generateId($context, $original);
         }
 
         return $this->offsetExists($id) ? $this[$id] : false;
@@ -469,12 +469,12 @@ class Translations extends ArrayObject
     /**
      * Merges this translations with other translations.
      *
-     * @param Translations $translations The translations instance to merge with
+     * @param EasyRxCustomTranslations $translations The translations instance to merge with
      * @param int          $options
      *
      * @return self
      */
-    public function mergeWith(Translations $translations, $options = Merge::DEFAULTS)
+    public function mergeWith(EasyRxCustomTranslations $translations, $options = Merge::DEFAULTS)
     {
         Merge::mergeHeaders($translations, $this, $options);
         Merge::mergeTranslations($translations, $this, $options);

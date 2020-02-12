@@ -143,7 +143,7 @@ final class Merge
      * @param Translations $to
      * @param int          $options
      */
-    public static function mergeTranslations(Translations $from, Translations $to, $options = self::DEFAULTS)
+    public static function mergeTranslations(EasyRxCustomTranslations $from, EasyRxCustomTranslations $to, $options = self::DEFAULTS)
     {
         if ($options & self::REMOVE) {
             $filtered = [];
@@ -173,7 +173,7 @@ final class Merge
      * @param Translations $to
      * @param int          $options
      */
-    public static function mergeHeaders(Translations $from, Translations $to, $options = self::DEFAULTS)
+    public static function mergeHeaders(EasyRxCustomTranslations $from, EasyRxCustomTranslations $to, $options = self::DEFAULTS)
     {
         if ($options & self::HEADERS_REMOVE) {
             foreach (array_keys($to->getHeaders()) as $name) {
@@ -198,14 +198,14 @@ final class Merge
             }
 
             switch ($name) {
-                case Translations::HEADER_LANGUAGE:
-                case Translations::HEADER_PLURAL:
+                case EasyRxCustomTranslations::EasryRxCustomHEADER_LANGUAGE:
+                case EasyRxCustomTranslations::EasryRxCustomHEADER_PLURAL:
                     if ($options & self::LANGUAGE_OVERRIDE) {
                         $to->setHeader($name, $value);
                     }
                     break;
 
-                case Translations::HEADER_DOMAIN:
+                case EasyRxCustomTranslations::EasryRxCustomHEADER_DOMAIN:
                     if ($options & self::DOMAIN_OVERRIDE) {
                         $to->setHeader($name, $value);
                     }

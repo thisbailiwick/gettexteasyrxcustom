@@ -33,17 +33,17 @@ include_once "libs/cldr-to-gettext-plural-rules/src/autoloader.php";
 
 This package contains the following classes:
 
-* `GettextEasyRxCustom\Translation` - A translation definition
-* `GettextEasyRxCustom\Translations` - A collection of translations
-* `GettextEasyRxCustom\Extractors\*` - Import translations from various sources (po, mo, php, js, etc)
-* `GettextEasyRxCustom\Generators\*` - Export translations to various formats (po, mo, php, json, etc)
-* `GettextEasyRxCustom\Translator` - To use the translations in your php templates instead the [gettext extension](http://php.net/gettext)
-* `GettextEasyRxCustom\GettextTranslator` - To use the [gettext extension](http://php.net/gettext)
+* `GettextEasyRxCustom\EasryRxCustomTranslation` - A translation definition
+* `GettextEasyRxCustom\EasryRxCustomTranslations` - A collection of translations
+* `GettextEasyRxCustom\EasryRxCustomExtractors\*` - Import translations from various sources (po, mo, php, js, etc)
+* `GettextEasyRxCustom\EasryRxCustomGenerators\*` - Export translations to various formats (po, mo, php, json, etc)
+* `GettextEasyRxCustom\EasryRxCustomTranslator` - To use the translations in your php templates instead the [gettext extension](http://php.net/gettext)
+* `GettextEasyRxCustom\EasryRxCustomGettextTranslator` - To use the [gettext extension](http://php.net/gettext)
 
 ## Usage example
 
 ```php
-use GettextEasyRxCustom\Translations;
+use GettextEasyRxCustom\EasryRxCustomTranslations;
 
 //import from a .po file:
 $translations = Translations::fromPoFile('locales/gl.po');
@@ -65,7 +65,7 @@ $translations->toMoFile('Locale/gl/LC_MESSAGES/messages.mo');
 If you want use this translations in your php templates without using the gettext extension:
 
 ```php
-use GettextEasyRxCustom\Translator;
+use GettextEasyRxCustom\EasryRxCustomTranslator;
 
 //Create the translator instance
 $t = new Translator();
@@ -85,7 +85,7 @@ echo ___('apple'); // "Mazá"
 To use this translations with the gettext extension:
 
 ```php
-use GettextEasyRxCustom\GettextTranslator;
+use GettextEasyRxCustom\EasryRxCustomGettextTranslator;
 
 //Create the translator instance
 $t = new GettextTranslator();
@@ -118,11 +118,11 @@ The benefits of using the functions provided by this library (`___()` instead `_
 
 ## Translation
 
-The `GettextEasyRxCustom\Translation` class stores all information about a translation: the original text, the translated text, source references, comments, etc.
+The `GettextEasyRxCustom\EasryRxCustomTranslation` class stores all information about a translation: the original text, the translated text, source references, comments, etc.
 
 ```php
 // __construct($context, $original, $plural)
-$translation = new GettextEasyRxCustom\Translation('comments', 'One comment', '%s comments');
+$translation = new GettextEasyRxCustom\EasryRxCustomTranslation('comments', 'One comment', '%s comments');
 
 $translation->setTranslation('Un comentario');
 $translation->setPluralTranslation('%s comentarios');
@@ -139,13 +139,13 @@ echo $translation->getTranslation(); // Un comentario
 
 ## Translations
 
-The `GettextEasyRxCustom\Translations` class stores a collection of translations:
+The `GettextEasyRxCustom\EasryRxCustomTranslations` class stores a collection of translations:
 
 ```php
-$translations = new GettextEasyRxCustom\Translations();
+$translations = new GettextEasyRxCustom\EasryRxCustomTranslations();
 
 //You can add new translations using the array syntax
-$translations[] = new GettextEasyRxCustom\Translation('comments', 'One comment', '%s comments');
+$translations[] = new GettextEasyRxCustom\EasryRxCustomTranslation('comments', 'One comment', '%s comments');
 
 //Or using the "insert" method
 $insertedTranslation = $translations->insert('comments', 'One comment', '%s comments');
@@ -163,21 +163,21 @@ $translations->setDomain('my-blog');
 The extrators allows to fetch gettext values from any source. For example, to scan a .po file:
 
 ```php
-$translations = new GettextEasyRxCustom\Translations();
+$translations = new GettextEasyRxCustom\EasryRxCustomTranslations();
 
 //From a file
-GettextEasyRxCustom\Extractors\Po::fromFile('locales/en.po', $translations);
+GettextEasyRxCustom\EasryRxCustomExtractors\Po::fromFile('locales/en.po', $translations);
 
 //From a string
 $string = file_get_contents('locales2/en.po');
-GettextEasyRxCustom\Extractors\Po::fromString($string, $translations);
+GettextEasyRxCustom\EasryRxCustomExtractors\Po::fromString($string, $translations);
 ```
 
-The better way to use extractors is using the magic methods of `GettextEasyRxCustom\Translations`:
+The better way to use extractors is using the magic methods of `GettextEasyRxCustom\EasryRxCustomTranslations`:
 
 ```php
 //Create a Translations instance using a po file
-$translations = GettextEasyRxCustom\Translations::fromPoFile('locales/en.po');
+$translations = GettextEasyRxCustom\EasryRxCustomTranslations::fromPoFile('locales/en.po');
 
 //Add more messages from other files
 $translations->addFromPoFile('locales2/en.po');
@@ -206,22 +206,22 @@ Name | Description | Example
 
 ## Generators
 
-The generators export a `GettextEasyRxCustom\Translations` instance to any format (po, mo, array, etc).
+The generators export a `GettextEasyRxCustom\EasryRxCustomTranslations` instance to any format (po, mo, array, etc).
 
 ```php
 //Save to a file
-GettextEasyRxCustom\Generators\Po::toFile($translations, 'locales/en.po');
+GettextEasyRxCustom\EasryRxCustomGenerators\Po::toFile($translations, 'locales/en.po');
 
 //Return as a string
-$content = GettextEasyRxCustom\Generators\Po::toString($translations);
+$content = GettextEasyRxCustom\EasryRxCustomGenerators\Po::toString($translations);
 file_put_contents('locales/en.po', $content);
 ```
 
-Like extractors, the better way to use generators is using the magic methods of `GettextEasyRxCustom\Translations`:
+Like extractors, the better way to use generators is using the magic methods of `GettextEasyRxCustom\EasryRxCustomTranslations`:
 
 ```php
 //Extract messages from a php code file
-$translations = GettextEasyRxCustom\Translations::fromPhpCodeFile('templates/index.php');
+$translations = GettextEasyRxCustom\EasryRxCustomTranslations::fromPhpCodeFile('templates/index.php');
 
 //Export to a po file
 $translations->toPoFile('locales/en.po');
@@ -249,25 +249,25 @@ Name | Description | Example
 
 ## Translator
 
-The class `GettextEasyRxCustom\Translator` implements the gettext functions in php. Useful if you don't have the native gettext extension for php or want to avoid problems with it. You can load the translations from a php array file or using a `GettextEasyRxCustom\Translations` instance:
+The class `GettextEasyRxCustom\EasryRxCustomTranslator` implements the gettext functions in php. Useful if you don't have the native gettext extension for php or want to avoid problems with it. You can load the translations from a php array file or using a `GettextEasyRxCustom\EasryRxCustomTranslations` instance:
 
 ```php
-use GettextEasyRxCustom\Translator;
+use GettextEasyRxCustom\EasryRxCustomTranslator;
 
 //Create a new instance of the translator
 $t = new Translator();
 
 //Load the translations using any of the following ways:
 
-// 1. from php files (generated by GettextEasyRxCustom\Extractors\PhpArray)
+// 1. from php files (generated by GettextEasyRxCustom\EasryRxCustomExtractors\PhpArray)
 $t->loadTranslations('locales/gl.php');
 
 // 2. using the array directly
 $array = include 'locales/gl.php';
 $t->loadTranslations($array);
 
-// 3. using a GettextEasyRxCustom\Translations instance (slower)
-$translations = GettextEasyRxCustom\Translations::fromPoFile('locales/gl.po');
+// 3. using a GettextEasyRxCustom\EasryRxCustomTranslations instance (slower)
+$translations = GettextEasyRxCustom\EasryRxCustomTranslations::fromPoFile('locales/gl.po');
 $t->loadTranslations($translations);
 
 //Now you can use it in your templates
@@ -276,10 +276,10 @@ echo $t->gettext('apple');
 
 ## GettextTranslator
 
-The class `GettextEasyRxCustom\GettextTranslator` uses the gettext extension. It's useful because combines the performance of using real gettext functions but with the same API than `Translator` class, so you can switch to one or other translator deppending of the environment without change code of your app.
+The class `GettextEasyRxCustom\EasryRxCustomGettextTranslator` uses the gettext extension. It's useful because combines the performance of using real gettext functions but with the same API than `Translator` class, so you can switch to one or other translator deppending of the environment without change code of your app.
 
 ```php
-use GettextEasyRxCustom\GettextTranslator;
+use GettextEasyRxCustom\EasryRxCustomGettextTranslator;
 
 //Create a new instance
 $t = new GettextTranslator();
@@ -325,7 +325,7 @@ To work with different translations you may want merge them in an unique file. T
 The simplest way is adding new translations:
 
 ```php
-use GettextEasyRxCustom\Translations;
+use GettextEasyRxCustom\EasryRxCustomTranslations;
 
 $translations = Translations::fromPoFile('my-file1.po');
 $translations->addFromPoFile('my-file2.po');
@@ -334,7 +334,7 @@ $translations->addFromPoFile('my-file2.po');
 A more advanced way is merge two `Translations` instances:
 
 ```php
-use GettextEasyRxCustom\Translations;
+use GettextEasyRxCustom\EasryRxCustomTranslations;
 
 //Create a new Translations instances with our translations.
 
@@ -347,7 +347,7 @@ $translations1->mergeWith($translations2);
 //Now translations1 has all values
 ```
 
-The second argument of `mergeWith` defines how the merge will be done. Use the `GettextEasyRxCustom\Merge` constants to configure the merging:
+The second argument of `mergeWith` defines how the merge will be done. Use the `GettextEasyRxCustom\EasryRxCustomMerge` constants to configure the merging:
 
 Constant | Description
 --------- | -----------
@@ -371,8 +371,8 @@ Constant | Description
 Example:
 
 ```php
-use GettextEasyRxCustom\Translations;
-use GettextEasyRxCustom\Merge;
+use GettextEasyRxCustom\EasryRxCustomTranslations;
+use GettextEasyRxCustom\EasryRxCustomMerge;
 
 //Scan the php code to find the latest gettext translations
 $phpTranslations = Translations::fromPhpCodeFile('my-templates.php');

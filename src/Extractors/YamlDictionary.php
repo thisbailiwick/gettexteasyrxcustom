@@ -1,9 +1,9 @@
 <?php
 
-namespace GettextEasyRxCustom\Extractors;
+namespace GettextEasyRxCustom\EasryRxCustomExtractors;
 
-use GettextEasyRxCustom\Translations;
-use GettextEasyRxCustom\Utils\DictionaryTrait;
+use GettextEasyRxCustom\EasryRxCustomTranslations;
+use GettextEasyRxCustom\EasryRxCustomUtils\DictionaryTrait;
 use Symfony\Component\Yaml\Yaml as YamlParser;
 
 /**
@@ -16,7 +16,7 @@ class YamlDictionary extends Extractor implements ExtractorInterface
     /**
      * {@inheritdoc}
      */
-    public static function fromString($string, Translations $translations, array $options = [])
+    public static function fromString($string, EasyRxCustomTranslations $translations, array $options = [])
     {
         $messages = YamlParser::parse($string);
 

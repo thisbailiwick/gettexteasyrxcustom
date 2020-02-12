@@ -1,10 +1,10 @@
 <?php
 
-namespace GettextEasyRxCustom\Extractors;
+namespace GettextEasyRxCustom\EasryRxCustomExtractors;
 
 use BadMethodCallException;
-use GettextEasyRxCustom\Translations;
-use GettextEasyRxCustom\Utils\MultidimensionalArrayTrait;
+use GettextEasyRxCustom\EasryRxCustomTranslations;
+use GettextEasyRxCustom\EasryRxCustomUtils\MultidimensionalArrayTrait;
 
 /**
  * Class to get gettext strings from php files returning arrays.
@@ -16,7 +16,7 @@ class PhpArray extends Extractor implements ExtractorInterface
     /**
      * {@inheritdoc}
      */
-    public static function fromFile($file, Translations $translations, array $options = [])
+    public static function fromFile($file, EasyRxCustomTranslations $translations, array $options = [])
     {
         foreach (static::getFiles($file) as $file) {
             static::fromArray(include($file), $translations);
@@ -26,7 +26,7 @@ class PhpArray extends Extractor implements ExtractorInterface
     /**
      * {@inheritdoc}
      */
-    public static function fromString($string, Translations $translations, array $options = [])
+    public static function fromString($string, EasyRxCustomTranslations $translations, array $options = [])
     {
         throw new BadMethodCallException('PhpArray::fromString() cannot be called. Use PhpArray::fromFile()');
     }

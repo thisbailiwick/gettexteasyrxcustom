@@ -1,9 +1,9 @@
 <?php
 
-namespace GettextEasyRxCustom\Extractors;
+namespace GettextEasyRxCustom\EasryRxCustomExtractors;
 
-use GettextEasyRxCustom\Translations;
-use GettextEasyRxCustom\Translation;
+use GettextEasyRxCustom\EasryRxCustomTranslations;
+use GettextEasyRxCustom\EasryRxCustomTranslation;
 use SimpleXMLElement;
 
 /**
@@ -19,7 +19,7 @@ class Xliff extends Extractor implements ExtractorInterface
     /**
      * {@inheritdoc}
      */
-    public static function fromString($string, Translations $translations, array $options = [])
+    public static function fromString($string, EasyRxCustomTranslations $translations, array $options = [])
     {
         $options += static::$options;
 

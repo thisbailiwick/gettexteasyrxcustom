@@ -1,10 +1,10 @@
 <?php
 
-namespace GettextEasyRxCustom\Extractors;
+namespace GettextEasyRxCustom\EasryRxCustomExtractors;
 
-use GettextEasyRxCustom\Translations;
-use GettextEasyRxCustom\Utils\HeadersExtractorTrait;
-use GettextEasyRxCustom\Utils\CsvTrait;
+use GettextEasyRxCustom\EasryRxCustomTranslations;
+use GettextEasyRxCustom\EasryRxCustomUtils\HeadersExtractorTrait;
+use GettextEasyRxCustom\EasryRxCustomUtils\CsvTrait;
 
 /**
  * Class to get gettext strings from csv.
@@ -23,7 +23,7 @@ class CsvDictionary extends Extractor implements ExtractorInterface
     /**
      * {@inheritdoc}
      */
-    public static function fromString($string, Translations $translations, array $options = [])
+    public static function fromString($string, EasyRxCustomTranslations $translations, array $options = [])
     {
         $options += static::$options;
         $handle = fopen('php://memory', 'w');

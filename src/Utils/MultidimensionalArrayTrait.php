@@ -1,8 +1,8 @@
 <?php
 
-namespace GettextEasyRxCustom\Utils;
+namespace GettextEasyRxCustom\EasryRxCustomUtils;
 
-use GettextEasyRxCustom\Translations;
+use GettextEasyRxCustom\EasryRxCustomTranslations;
 
 /**
  * Trait used by all generators that exports the translations to multidimensional arrays
@@ -16,13 +16,13 @@ trait MultidimensionalArrayTrait
     /**
      * Returns a multidimensional array.
      *
-     * @param Translations $translations
+     * @param EasyRxCustomTranslations $translations
      * @param bool         $includeHeaders
      * @param bool         $forceArray
      *
      * @return array
      */
-    protected static function toArray(Translations $translations, $includeHeaders, $forceArray = false)
+    protected static function toArray(EasyRxCustomTranslations $translations, $includeHeaders, $forceArray = false)
     {
         $pluralForm = $translations->getPluralForms();
         $pluralSize = is_array($pluralForm) ? ($pluralForm[0] - 1) : null;
@@ -67,16 +67,16 @@ trait MultidimensionalArrayTrait
      * Extract the entries from a multidimensional array.
      *
      * @param array        $messages
-     * @param Translations $translations
+     * @param EasyRxCustomTranslations $translations
      */
-    protected static function fromArray(array $messages, Translations $translations)
+    protected static function fromArray(array $messages, EasyRxCustomTranslations $translations)
     {
         if (!empty($messages['domain'])) {
             $translations->setDomain($messages['domain']);
         }
 
         if (!empty($messages['plural-forms'])) {
-            $translations->setHeader(Translations::HEADER_PLURAL, $messages['plural-forms']);
+            $translations->setHeader(EasryRxCustomTranslations::HEADER_PLURAL, $messages['plural-forms']);
         }
 
         foreach ($messages['messages'] as $context => $contextTranslations) {

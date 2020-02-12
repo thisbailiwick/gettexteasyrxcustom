@@ -1,9 +1,9 @@
 <?php
 
-namespace GettextEasyRxCustom\Generators;
+namespace GettextEasyRxCustom\EasryRxCustomGenerators;
 
-use GettextEasyRxCustom\Translation;
-use GettextEasyRxCustom\Translations;
+use GettextEasyRxCustom\EasryRxCustomTranslation;
+use GettextEasyRxCustom\EasryRxCustomTranslations;
 use DOMDocument;
 
 class Xliff extends Generator implements GeneratorInterface
@@ -13,7 +13,7 @@ class Xliff extends Generator implements GeneratorInterface
     /**
      * {@inheritdoc}
      */
-    public static function toString(Translations $translations, array $options = [])
+    public static function toString(EasyRxCustomTranslations $translations, array $options = [])
     {
         $dom = new DOMDocument('1.0', 'utf-8');
         $dom->formatOutput = true;

@@ -1,9 +1,9 @@
 <?php
 
-namespace GettextEasyRxCustom\Extractors;
+namespace GettextEasyRxCustom\EasryRxCustomExtractors;
 
-use GettextEasyRxCustom\Translations;
-use GettextEasyRxCustom\Utils\MultidimensionalArrayTrait;
+use GettextEasyRxCustom\EasryRxCustomTranslations;
+use GettextEasyRxCustom\EasryRxCustomUtils\MultidimensionalArrayTrait;
 
 /**
  * Class to get gettext strings from json.
@@ -15,7 +15,7 @@ class Json extends Extractor implements ExtractorInterface
     /**
      * {@inheritdoc}
      */
-    public static function fromString($string, Translations $translations, array $options = [])
+    public static function fromString($string, EasyRxCustomTranslations $translations, array $options = [])
     {
         $messages = json_decode($string, true);
 

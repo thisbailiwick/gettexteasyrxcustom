@@ -1,8 +1,8 @@
 <?php
 
-namespace GettextEasyRxCustom\Generators;
+namespace GettextEasyRxCustom\EasryRxCustomGenerators;
 
-use GettextEasyRxCustom\Translations;
+use GettextEasyRxCustom\EasryRxCustomTranslations;
 
 class Jed extends Generator implements GeneratorInterface
 {
@@ -13,7 +13,7 @@ class Jed extends Generator implements GeneratorInterface
     /**
      * {@parentDoc}.
      */
-    public static function toString(Translations $translations, array $options = [])
+    public static function toString(EasyRxCustomTranslations $translations, array $options = [])
     {
         $domain = $translations->getDomain() ?: 'messages';
         $options += static::$options;
@@ -32,11 +32,11 @@ class Jed extends Generator implements GeneratorInterface
     /**
      * Generates an array with all translations.
      *
-     * @param Translations $translations
+     * @param EasyRxCustomTranslations $translations
      *
      * @return array
      */
-    protected static function buildMessages(Translations $translations)
+    protected static function buildMessages(EasyRxCustomTranslations $translations)
     {
         $pluralForm = $translations->getPluralForms();
         $pluralSize = is_array($pluralForm) ? ($pluralForm[0] - 1) : null;

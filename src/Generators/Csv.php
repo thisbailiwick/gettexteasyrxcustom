@@ -1,10 +1,10 @@
 <?php
 
-namespace GettextEasyRxCustom\Generators;
+namespace GettextEasyRxCustom\EasryRxCustomGenerators;
 
-use GettextEasyRxCustom\Translations;
-use GettextEasyRxCustom\Utils\HeadersGeneratorTrait;
-use GettextEasyRxCustom\Utils\CsvTrait;
+use GettextEasyRxCustom\EasryRxCustomTranslations;
+use GettextEasyRxCustom\EasryRxCustomUtils\HeadersGeneratorTrait;
+use GettextEasyRxCustom\EasryRxCustomUtils\CsvTrait;
 
 /**
  * Class to export translations to csv.
@@ -24,7 +24,7 @@ class Csv extends Generator implements GeneratorInterface
     /**
      * {@parentDoc}.
      */
-    public static function toString(Translations $translations, array $options = [])
+    public static function toString(EasyRxCustomTranslations $translations, array $options = [])
     {
         $options += static::$options;
         $handle = fopen('php://memory', 'w');

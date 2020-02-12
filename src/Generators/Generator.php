@@ -1,15 +1,15 @@
 <?php
 
-namespace GettextEasyRxCustom\Generators;
+namespace GettextEasyRxCustom\EasryRxCustomGenerators;
 
-use GettextEasyRxCustom\Translations;
+use GettextEasyRxCustom\EasryRxCustomTranslations;
 
 abstract class Generator implements GeneratorInterface
 {
     /**
      * {@inheritdoc}
      */
-    public static function toFile(Translations $translations, $file, array $options = [])
+    public static function toFile(EasyRxCustomTranslations $translations, $file, array $options = [])
     {
         $content = static::toString($translations, $options);
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace GettextEasyRxCustom\Extractors;
+namespace GettextEasyRxCustom\EasryRxCustomExtractors;
 
 use Exception;
-use GettextEasyRxCustom\Translations;
-use GettextEasyRxCustom\Utils\FunctionsScanner;
+use GettextEasyRxCustom\EasryRxCustomTranslations;
+use GettextEasyRxCustom\EasryRxCustomUtils\FunctionsScanner;
 
 /**
  * Class to get gettext strings from php files returning arrays.
@@ -42,13 +42,13 @@ class PhpCode extends Extractor implements ExtractorInterface, ExtractorMultiInt
         ],
     ];
 
-    protected static $functionsScannerClass = 'GettextEasyRxCustom\Utils\PhpFunctionsScanner';
+    protected static $functionsScannerClass = 'GettextEasyRxCustom\EasryRxCustomUtils\PhpFunctionsScanner';
 
     /**
      * {@inheritdoc}
      * @throws Exception
      */
-    public static function fromString($string, Translations $translations, array $options = [])
+    public static function fromString($string, EasyRxCustomTranslations $translations, array $options = [])
     {
         static::fromStringMultiple($string, [$translations], $options);
     }

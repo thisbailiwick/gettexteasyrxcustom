@@ -2,9 +2,9 @@
 
 namespace GettextEasyRxCustom;
 
-use GettextEasyRxCustom\Generators\PhpArray;
+use GettextEasyRxCustom\EasryRxCustomGenerators\PhpArray;
 
-class Translator extends BaseTranslator implements TranslatorInterface
+class Translator extends EasyRxCustomBaseTranslator implements TranslatorInterface
 {
     protected $domain;
     protected $dictionary = [];
@@ -19,7 +19,7 @@ class Translator extends BaseTranslator implements TranslatorInterface
      */
     public function loadTranslations($translations)
     {
-        if (is_object($translations) && $translations instanceof Translations) {
+        if (is_object($translations) && $translations instanceof EasryRxCustomTranslations) {
             $translations = PhpArray::generate($translations, ['includeHeaders' => false]);
         } elseif (is_string($translations) && is_file($translations)) {
             $translations = include $translations;

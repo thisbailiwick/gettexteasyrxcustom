@@ -1,7 +1,7 @@
 <?php
 
 spl_autoload_register(function ($class) {
-    if (strpos($class, 'GettextEasyRxCustom\\') !== 0) {
+    if (strpos($class, 'GettextEasyRxCustom\EasryRxCustom\') !== 0) {
         return;
     }
 

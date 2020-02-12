@@ -1,10 +1,10 @@
 <?php
 
-namespace GettextEasyRxCustom\Extractors;
+namespace GettextEasyRxCustom\EasryRxCustomExtractors;
 
-use GettextEasyRxCustom\Translations;
-use GettextEasyRxCustom\Translation;
-use GettextEasyRxCustom\Utils\HeadersExtractorTrait;
+use GettextEasyRxCustom\EasryRxCustomTranslations;
+use GettextEasyRxCustom\EasryRxCustomTranslation;
+use GettextEasyRxCustom\EasryRxCustomUtils\HeadersExtractorTrait;
 
 /**
  * Class to get gettext strings from php files returning arrays.
@@ -18,7 +18,7 @@ class Po extends Extractor implements ExtractorInterface
      *
      * {@inheritdoc}
      */
-    public static function fromString($string, Translations $translations, array $options = [])
+    public static function fromString($string, EasyRxCustomTranslations $translations, array $options = [])
     {
         $lines = explode("\n", $string);
         $i = 0;

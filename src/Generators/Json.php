@@ -1,9 +1,9 @@
 <?php
 
-namespace GettextEasyRxCustom\Generators;
+namespace GettextEasyRxCustom\EasryRxCustomGenerators;
 
-use GettextEasyRxCustom\Translations;
-use GettextEasyRxCustom\Utils\MultidimensionalArrayTrait;
+use GettextEasyRxCustom\EasryRxCustomTranslations;
+use GettextEasyRxCustom\EasryRxCustomUtils\MultidimensionalArrayTrait;
 
 class Json extends Generator implements GeneratorInterface
 {
@@ -17,7 +17,7 @@ class Json extends Generator implements GeneratorInterface
     /**
      * {@inheritdoc}
      */
-    public static function toString(Translations $translations, array $options = [])
+    public static function toString(EasyRxCustomTranslations $translations, array $options = [])
     {
         $options += static::$options;
 
