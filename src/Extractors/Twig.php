@@ -1,8 +1,8 @@
 <?php
 
-namespace GettextEasyRxCustom\EasryRxCustomExtractors;
+namespace GettextEasyRxCustom\EasyRxCustomExtractors;
 
-use GettextEasyRxCustom\EasryRxCustomTranslations;
+use GettextEasyRxCustom\EasyRxCustomTranslations;
 use Twig_Loader_Array;
 use Twig_Environment;
 use Twig_Source;

@@ -1,9 +1,9 @@
 <?php
 
-namespace GettextEasyRxCustom\EasryRxCustomExtractors;
+namespace GettextEasyRxCustom\EasyRxCustomExtractors;
 
-use GettextEasyRxCustom\EasryRxCustomTranslations;
-use GettextEasyRxCustom\EasryRxCustomUtils\DictionaryTrait;
+use GettextEasyRxCustom\EasyRxCustomTranslations;
+use GettextEasyRxCustom\EasyRxCustomUtils\DictionaryTrait;
 use Symfony\Component\Yaml\Yaml as YamlParser;
 
 /**

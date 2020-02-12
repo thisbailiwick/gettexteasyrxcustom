@@ -1,10 +1,10 @@
 <?php
 
-namespace GettextEasyRxCustom\EasryRxCustomGenerators;
+namespace GettextEasyRxCustom\EasyRxCustomGenerators;
 
-use GettextEasyRxCustom\EasryRxCustomTranslations;
-use GettextEasyRxCustom\EasryRxCustomUtils\DictionaryTrait;
-use GettextEasyRxCustom\EasryRxCustomUtils\CsvTrait;
+use GettextEasyRxCustom\EasyRxCustomTranslations;
+use GettextEasyRxCustom\EasyRxCustomUtils\DictionaryTrait;
+use GettextEasyRxCustom\EasyRxCustomUtils\CsvTrait;
 
 class CsvDictionary extends Generator implements GeneratorInterface
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace GettextEasyRxCustom\EasryRxCustomUtils;
+namespace GettextEasyRxCustom\EasyRxCustomUtils;
 
 /*
  * Trait to provide the functionality of read/write csv.

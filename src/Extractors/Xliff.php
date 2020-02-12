@@ -1,9 +1,9 @@
 <?php
 
-namespace GettextEasyRxCustom\EasryRxCustomExtractors;
+namespace GettextEasyRxCustom\EasyRxCustomExtractors;
 
-use GettextEasyRxCustom\EasryRxCustomTranslations;
-use GettextEasyRxCustom\EasryRxCustomTranslation;
+use GettextEasyRxCustom\EasyRxCustomTranslations;
+use GettextEasyRxCustom\EasyRxCustomTranslation;
 use SimpleXMLElement;
 
 /**

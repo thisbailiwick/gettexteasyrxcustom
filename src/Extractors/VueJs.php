@@ -1,15 +1,15 @@
 <?php
 /** @noinspection PhpComposerExtensionStubsInspection */
 
-namespace GettextEasyRxCustom\EasryRxCustomExtractors;
+namespace GettextEasyRxCustom\EasyRxCustomExtractors;
 
 use DOMAttr;
 use DOMDocument;
 use DOMElement;
 use DOMNode;
 use Exception;
-use GettextEasyRxCustom\EasryRxCustomTranslations;
-use GettextEasyRxCustom\EasryRxCustomUtils\FunctionsScanner;
+use GettextEasyRxCustom\EasyRxCustomTranslations;
+use GettextEasyRxCustom\EasyRxCustomUtils\FunctionsScanner;
 
 /**
  * Class to get gettext strings from VueJS template files.
@@ -41,7 +41,7 @@ class VueJs extends Extractor implements ExtractorInterface, ExtractorMultiInter
         ],
     ];
 
-    protected static $functionsScannerClass = 'GettextEasyRxCustom\EasryRxCustomUtils\JsFunctionsScanner';
+    protected static $functionsScannerClass = 'GettextEasyRxCustom\EasyRxCustomUtils\JsFunctionsScanner';
 
     /**
      * @inheritDoc

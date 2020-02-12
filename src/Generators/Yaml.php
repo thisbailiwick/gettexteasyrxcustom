@@ -1,9 +1,9 @@
 <?php
 
-namespace GettextEasyRxCustom\EasryRxCustomGenerators;
+namespace GettextEasyRxCustom\EasyRxCustomGenerators;
 
-use GettextEasyRxCustom\EasryRxCustomTranslations;
-use GettextEasyRxCustom\EasryRxCustomUtils\MultidimensionalArrayTrait;
+use GettextEasyRxCustom\EasyRxCustomTranslations;
+use GettextEasyRxCustom\EasyRxCustomUtils\MultidimensionalArrayTrait;
 use Symfony\Component\Yaml\Yaml as YamlDumper;
 
 class Yaml extends Generator implements GeneratorInterface

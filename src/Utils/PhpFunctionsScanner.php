@@ -1,8 +1,8 @@
 <?php
 
-namespace GettextEasyRxCustom\EasryRxCustomUtils;
+namespace GettextEasyRxCustom\EasyRxCustomUtils;
 
-use GettextEasyRxCustom\EasryRxCustomExtractors\PhpCode;
+use GettextEasyRxCustom\EasyRxCustomExtractors\PhpCode;
 
 class PhpFunctionsScanner extends FunctionsScanner
 {

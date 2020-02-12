@@ -1,10 +1,10 @@
 <?php
 
-namespace GettextEasyRxCustom\EasryRxCustomExtractors;
+namespace GettextEasyRxCustom\EasyRxCustomExtractors;
 
 use Exception;
-use GettextEasyRxCustom\EasryRxCustomTranslations;
-use GettextEasyRxCustom\EasryRxCustomUtils\FunctionsScanner;
+use GettextEasyRxCustom\EasyRxCustomTranslations;
+use GettextEasyRxCustom\EasyRxCustomUtils\FunctionsScanner;
 
 /**
  * Class to get gettext strings from php files returning arrays.
@@ -42,7 +42,7 @@ class PhpCode extends Extractor implements ExtractorInterface, ExtractorMultiInt
         ],
     ];
 
-    protected static $functionsScannerClass = 'GettextEasyRxCustom\EasryRxCustomUtils\PhpFunctionsScanner';
+    protected static $functionsScannerClass = 'GettextEasyRxCustom\EasyRxCustomUtils\PhpFunctionsScanner';
 
     /**
      * {@inheritdoc}

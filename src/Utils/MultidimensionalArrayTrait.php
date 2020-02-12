@@ -1,8 +1,8 @@
 <?php
 
-namespace GettextEasyRxCustom\EasryRxCustomUtils;
+namespace GettextEasyRxCustom\EasyRxCustomUtils;
 
-use GettextEasyRxCustom\EasryRxCustomTranslations;
+use GettextEasyRxCustom\EasyRxCustomTranslations;
 
 /**
  * Trait used by all generators that exports the translations to multidimensional arrays
@@ -76,7 +76,7 @@ trait MultidimensionalArrayTrait
         }
 
         if (!empty($messages['plural-forms'])) {
-            $translations->setHeader(EasryRxCustomTranslations::HEADER_PLURAL, $messages['plural-forms']);
+            $translations->setHeader(EasyRxCustomTranslations::HEADER_PLURAL, $messages['plural-forms']);
         }
 
         foreach ($messages['messages'] as $context => $contextTranslations) {

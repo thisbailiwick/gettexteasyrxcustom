@@ -1,6 +1,6 @@
 <?php
 
-use GettextEasyRxCustom\EasryRxCustomBaseTranslator;
+use GettextEasyRxCustom\EasyRxCustomBaseTranslator;
 
 /**
  * Returns the translation of a string.
@@ -11,7 +11,7 @@ use GettextEasyRxCustom\EasryRxCustomBaseTranslator;
  */
 function ___($original)
 {
-    $text = EasryRxCustomBaseTranslator::$current->gettext($original);
+    $text = EasyRxCustomBaseTranslator::$current->gettext($original);
 
     if (func_num_args() === 1) {
         return $text;
@@ -45,7 +45,7 @@ function noop___($original)
  */
 function n___($original, $plural, $value)
 {
-    $text = EasryRxCustomBaseTranslator::$current->ngettext($original, $plural, $value);
+    $text = EasyRxCustomBaseTranslator::$current->ngettext($original, $plural, $value);
 
     if (func_num_args() === 3) {
         return $text;
@@ -66,7 +66,7 @@ function n___($original, $plural, $value)
  */
 function p___($context, $original)
 {
-    $text = EasryRxCustomBaseTranslator::$current->pgettext($context, $original);
+    $text = EasyRxCustomBaseTranslator::$current->pgettext($context, $original);
 
     if (func_num_args() === 2) {
         return $text;
@@ -87,7 +87,7 @@ function p___($context, $original)
  */
 function d___($domain, $original)
 {
-    $text = EasryRxCustomBaseTranslator::$current->dgettext($domain, $original);
+    $text = EasyRxCustomBaseTranslator::$current->dgettext($domain, $original);
 
     if (func_num_args() === 2) {
         return $text;
@@ -109,7 +109,7 @@ function d___($domain, $original)
  */
 function dp___($domain, $context, $original)
 {
-    $text = EasryRxCustomBaseTranslator::$current->dpgettext($domain, $context, $original);
+    $text = EasyRxCustomBaseTranslator::$current->dpgettext($domain, $context, $original);
 
     if (func_num_args() === 3) {
         return $text;
@@ -132,7 +132,7 @@ function dp___($domain, $context, $original)
  */
 function dn___($domain, $original, $plural, $value)
 {
-    $text = EasryRxCustomBaseTranslator::$current->dngettext($domain, $original, $plural, $value);
+    $text = EasyRxCustomBaseTranslator::$current->dngettext($domain, $original, $plural, $value);
 
     if (func_num_args() === 4) {
         return $text;
@@ -155,7 +155,7 @@ function dn___($domain, $original, $plural, $value)
  */
 function np___($context, $original, $plural, $value)
 {
-    $text = EasryRxCustomBaseTranslator::$current->npgettext($context, $original, $plural, $value);
+    $text = EasyRxCustomBaseTranslator::$current->npgettext($context, $original, $plural, $value);
 
     if (func_num_args() === 4) {
         return $text;
@@ -179,7 +179,7 @@ function np___($context, $original, $plural, $value)
  */
 function dnp___($domain, $context, $original, $plural, $value)
 {
-    $text = EasryRxCustomBaseTranslator::$current->dnpgettext($domain, $context, $original, $plural, $value);
+    $text = EasyRxCustomBaseTranslator::$current->dnpgettext($domain, $context, $original, $plural, $value);
 
     if (func_num_args() === 5) {
         return $text;

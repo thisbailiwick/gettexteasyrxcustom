@@ -1,8 +1,8 @@
 <?php
 
-namespace GettextEasyRxCustom\EasryRxCustomGenerators;
+namespace GettextEasyRxCustom\EasyRxCustomGenerators;
 
-use GettextEasyRxCustom\EasryRxCustomTranslations;
+use GettextEasyRxCustom\EasyRxCustomTranslations;
 
 abstract class Generator implements GeneratorInterface
 {

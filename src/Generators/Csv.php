@@ -1,10 +1,10 @@
 <?php
 
-namespace GettextEasyRxCustom\EasryRxCustomGenerators;
+namespace GettextEasyRxCustom\EasyRxCustomGenerators;
 
-use GettextEasyRxCustom\EasryRxCustomTranslations;
-use GettextEasyRxCustom\EasryRxCustomUtils\HeadersGeneratorTrait;
-use GettextEasyRxCustom\EasryRxCustomUtils\CsvTrait;
+use GettextEasyRxCustom\EasyRxCustomTranslations;
+use GettextEasyRxCustom\EasyRxCustomUtils\HeadersGeneratorTrait;
+use GettextEasyRxCustom\EasyRxCustomUtils\CsvTrait;
 
 /**
  * Class to export translations to csv.

@@ -1,8 +1,8 @@
 <?php
 
-namespace GettextEasyRxCustom\EasryRxCustomUtils;
+namespace GettextEasyRxCustom\EasyRxCustomUtils;
 
-use GettextEasyRxCustom\EasryRxCustomTranslations;
+use GettextEasyRxCustom\EasyRxCustomTranslations;
 
 /**
  * Trait used by all generators that exports the translations to plain dictionary (original => singular-translation).

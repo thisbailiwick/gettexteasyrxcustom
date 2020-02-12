@@ -1,10 +1,10 @@
 <?php
 
-namespace GettextEasyRxCustom\EasryRxCustomExtractors;
+namespace GettextEasyRxCustom\EasyRxCustomExtractors;
 
 use Exception;
-use GettextEasyRxCustom\EasryRxCustomTranslations;
-use GettextEasyRxCustom\EasryRxCustomUtils\StringReader;
+use GettextEasyRxCustom\EasyRxCustomTranslations;
+use GettextEasyRxCustom\EasyRxCustomUtils\StringReader;
 
 /**
  * Class to get gettext strings from .mo files.
@@ -15,7 +15,7 @@ class Mo extends Extractor implements ExtractorInterface
     const MAGIC2 = -569244523;
     const MAGIC3 = 2500072158;
 
-    protected static $stringReaderClass = 'GettextEasyRxCustom\EasryRxCustomUtils\StringReader';
+    protected static $stringReaderClass = 'GettextEasyRxCustom\EasyRxCustomUtils\StringReader';
 
     /**
      * {@inheritdoc}

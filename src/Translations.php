@@ -2,7 +2,7 @@
 
 namespace GettextEasyRxCustom;
 
-use GettextEasyRxCustom\EasryRxCustomLanguages\Language;
+use GettextEasyRxCustom\EasyRxCustomLanguages\Language;
 use BadMethodCallException;
 use InvalidArgumentException;
 use ArrayObject;
@@ -131,7 +131,7 @@ class EasyRxCustomTranslations extends ArrayObject
         $input = [],
         $flags = 0,
         $iterator_class = 'ArrayIterator',
-        $translationClass = 'GettextEasyRxCustom\EasryRxCustomTranslation'
+        $translationClass = 'GettextEasyRxCustom\EasyRxCustomTranslation'
     ) {
         $this->headers = static::$options['defaultHeaders'];
 
@@ -175,7 +175,7 @@ class EasyRxCustomTranslations extends ArrayObject
         }
 
         if ($matches[1] === 'addFrom') {
-            $extractor = 'GettextEasyRxCustom\EasryRxCustom\Extractors\\'.$matches[2].'::from'.$matches[3];
+            $extractor = 'GettextEasyRxCustom\EasyRxCustom\Extractors\\'.$matches[2].'::from'.$matches[3];
             $source = array_shift($arguments);
             $options = array_shift($arguments) ?: [];
 
@@ -184,7 +184,7 @@ class EasyRxCustomTranslations extends ArrayObject
             return $this;
         }
 
-        $generator = 'GettextEasyRxCustom\EasryRxCustom\Generators\\'.$matches[2].'::to'.$matches[3];
+        $generator = 'GettextEasyRxCustom\EasyRxCustom\Generators\\'.$matches[2].'::to'.$matches[3];
 
         array_unshift($arguments, $this);
 
@@ -211,15 +211,15 @@ class EasyRxCustomTranslations extends ArrayObject
      * @param mixed       $index
      * @param Translation $value
      *
-     * @throws InvalidArgumentException If the value is not an instance of GettextEasyRxCustom\EasryRxCustomTranslation
+     * @throws InvalidArgumentException If the value is not an instance of GettextEasyRxCustom\EasyRxCustomTranslation
      *
      * @return Translation
      */
     public function offsetSet($index, $value)
     {
-        if (!($value instanceof EasryRxCustomTranslation)) {
+        if (!($value instanceof EasyRxCustomTranslation)) {
             throw new InvalidArgumentException(
-                'Only instances of GettextEasyRxCustom\EasryRxCustom\Translation must be added to a GettextEasyRxCustom\EasryRxCustom\Translations'
+                'Only instances of GettextEasyRxCustom\EasyRxCustom\Translation must be added to a GettextEasyRxCustom\EasyRxCustom\Translations'
             );
         }
 
@@ -427,10 +427,10 @@ class EasyRxCustomTranslations extends ArrayObject
      */
     public function find($context, $original = '')
     {
-        if ($context instanceof EasryRxCustomTranslation) {
+        if ($context instanceof EasyRxCustomTranslation) {
             $id = $context->getId();
         } else {
-            $id = EasryRxCustomTranslation::generateId($context, $original);
+            $id = EasyRxCustomTranslation::generateId($context, $original);
         }
 
         return $this->offsetExists($id) ? $this[$id] : false;

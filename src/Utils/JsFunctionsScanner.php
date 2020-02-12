@@ -1,6 +1,6 @@
 <?php
 
-namespace GettextEasyRxCustom\EasryRxCustomUtils;
+namespace GettextEasyRxCustom\EasyRxCustomUtils;
 
 class JsFunctionsScanner extends FunctionsScanner
 {

@@ -198,14 +198,14 @@ final class Merge
             }
 
             switch ($name) {
-                case EasyRxCustomTranslations::EasryRxCustomHEADER_LANGUAGE:
-                case EasyRxCustomTranslations::EasryRxCustomHEADER_PLURAL:
+                case EasyRxCustomTranslations::EasyRxCustomHEADER_LANGUAGE:
+                case EasyRxCustomTranslations::EasyRxCustomHEADER_PLURAL:
                     if ($options & self::LANGUAGE_OVERRIDE) {
                         $to->setHeader($name, $value);
                     }
                     break;
 
-                case EasyRxCustomTranslations::EasryRxCustomHEADER_DOMAIN:
+                case EasyRxCustomTranslations::EasyRxCustomHEADER_DOMAIN:
                     if ($options & self::DOMAIN_OVERRIDE) {
                         $to->setHeader($name, $value);
                     }

@@ -1,10 +1,10 @@
 <?php
 
-namespace GettextEasyRxCustom\EasryRxCustomExtractors;
+namespace GettextEasyRxCustom\EasyRxCustomExtractors;
 
 use Exception;
-use GettextEasyRxCustom\EasryRxCustomTranslations;
-use GettextEasyRxCustom\EasryRxCustomUtils\FunctionsScanner;
+use GettextEasyRxCustom\EasyRxCustomTranslations;
+use GettextEasyRxCustom\EasyRxCustomUtils\FunctionsScanner;
 
 /**
  * Class to get gettext strings from javascript files.
@@ -36,7 +36,7 @@ class JsCode extends Extractor implements ExtractorInterface, ExtractorMultiInte
         ],
     ];
 
-    protected static $functionsScannerClass = 'GettextEasyRxCustom\EasryRxCustomUtils\JsFunctionsScanner';
+    protected static $functionsScannerClass = 'GettextEasyRxCustom\EasyRxCustomUtils\JsFunctionsScanner';
 
     /**
      * @inheritdoc

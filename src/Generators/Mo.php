@@ -1,9 +1,9 @@
 <?php
 
-namespace GettextEasyRxCustom\EasryRxCustomGenerators;
+namespace GettextEasyRxCustom\EasyRxCustomGenerators;
 
-use GettextEasyRxCustom\EasryRxCustomTranslations;
-use GettextEasyRxCustom\EasryRxCustomUtils\HeadersGeneratorTrait;
+use GettextEasyRxCustom\EasyRxCustomTranslations;
+use GettextEasyRxCustom\EasyRxCustomUtils\HeadersGeneratorTrait;
 
 class Mo extends Generator implements GeneratorInterface
 {
@@ -53,7 +53,7 @@ class Mo extends Generator implements GeneratorInterface
                 // Headers
                 $translationString = $translation;
             } else {
-                /* @var $translation \GettextEasyRxCustom\EasryRxCustomTranslation */
+                /* @var $translation \GettextEasyRxCustom\EasyRxCustomTranslation */
                 if ($translation->hasPlural() && $translation->hasPluralTranslations(true)) {
                     $originalString .= "\x00".$translation->getPlural();
                     $translationString = $translation->getTranslation();

@@ -1,10 +1,10 @@
 <?php
 
-namespace GettextEasyRxCustom\EasryRxCustomExtractors;
+namespace GettextEasyRxCustom\EasyRxCustomExtractors;
 
-use GettextEasyRxCustom\EasryRxCustomTranslations;
-use GettextEasyRxCustom\EasryRxCustomTranslation;
-use GettextEasyRxCustom\EasryRxCustomUtils\HeadersExtractorTrait;
+use GettextEasyRxCustom\EasyRxCustomTranslations;
+use GettextEasyRxCustom\EasyRxCustomTranslation;
+use GettextEasyRxCustom\EasyRxCustomUtils\HeadersExtractorTrait;
 
 /**
  * Class to get gettext strings from php files returning arrays.

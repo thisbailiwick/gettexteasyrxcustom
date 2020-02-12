@@ -1,10 +1,10 @@
 <?php
 
-namespace GettextEasyRxCustom\EasryRxCustomExtractors;
+namespace GettextEasyRxCustom\EasyRxCustomExtractors;
 
-use GettextEasyRxCustom\EasryRxCustomTranslations;
-use GettextEasyRxCustom\EasryRxCustomUtils\HeadersExtractorTrait;
-use GettextEasyRxCustom\EasryRxCustomUtils\CsvTrait;
+use GettextEasyRxCustom\EasyRxCustomTranslations;
+use GettextEasyRxCustom\EasyRxCustomUtils\HeadersExtractorTrait;
+use GettextEasyRxCustom\EasyRxCustomUtils\CsvTrait;
 
 /**
  * Class to get gettext strings from csv.
