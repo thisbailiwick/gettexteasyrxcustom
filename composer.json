@@ -1,5 +1,5 @@
 {
-    "name": "easyrx/gettext-custom",
+    "name": "easyrx/gettexteasyrxcustom",
     "type": "library",
     "description": "PHP gettext manager",
     "keywords": ["js", "gettext", "i18n", "translation", "po", "mo"],
