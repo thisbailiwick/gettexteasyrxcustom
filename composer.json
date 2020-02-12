@@ -38,12 +38,12 @@
     },
     "autoload": {
         "psr-4": {
-            "GettextEasyRxCustom\EasryRxCustom\": "src"
+            "GettextEasyRxCustom\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "GettextEasyRxCustom\EasryRxCustom\Tests\\": "tests"
+            "GettextEasyRxCustom\\Tests\\": "tests"
         }
     },
     "scripts": {
