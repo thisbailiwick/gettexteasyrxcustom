@@ -1,6 +1,6 @@
 <?php
 
-namespace Gettext;
+namespace GettextEasyRxCustom;
 
 /**
  * Interface used by all translators.
@@ -8,7 +8,7 @@ namespace Gettext;
 interface TranslatorInterface
 {
     /**
-     * Register this translator as global, to use with the gettext functions __(), p__(), etc.
+     * Register this translator as global, to use with the gettext functions ___(), p___(), etc.
      * Returns the previous translator if exists.
      *
      * @return TranslatorInterface|null

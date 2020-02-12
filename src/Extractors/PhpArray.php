@@ -1,10 +1,10 @@
 <?php
 
-namespace Gettext\Extractors;
+namespace GettextEasyRxCustom\Extractors;
 
 use BadMethodCallException;
-use Gettext\Translations;
-use Gettext\Utils\MultidimensionalArrayTrait;
+use GettextEasyRxCustom\Translations;
+use GettextEasyRxCustom\Utils\MultidimensionalArrayTrait;
 
 /**
  * Class to get gettext strings from php files returning arrays.

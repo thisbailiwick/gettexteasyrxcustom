@@ -1,8 +1,8 @@
 <?php
 
-namespace Gettext\Generators;
+namespace GettextEasyRxCustom\Generators;
 
-use Gettext\Translations;
+use GettextEasyRxCustom\Translations;
 
 class Jed extends Generator implements GeneratorInterface
 {

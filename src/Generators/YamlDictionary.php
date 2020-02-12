@@ -1,9 +1,9 @@
 <?php
 
-namespace Gettext\Generators;
+namespace GettextEasyRxCustom\Generators;
 
-use Gettext\Translations;
-use Gettext\Utils\DictionaryTrait;
+use GettextEasyRxCustom\Translations;
+use GettextEasyRxCustom\Utils\DictionaryTrait;
 use Symfony\Component\Yaml\Yaml as YamlDumper;
 
 class YamlDictionary extends Generator implements GeneratorInterface

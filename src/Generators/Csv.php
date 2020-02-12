@@ -1,10 +1,10 @@
 <?php
 
-namespace Gettext\Generators;
+namespace GettextEasyRxCustom\Generators;
 
-use Gettext\Translations;
-use Gettext\Utils\HeadersGeneratorTrait;
-use Gettext\Utils\CsvTrait;
+use GettextEasyRxCustom\Translations;
+use GettextEasyRxCustom\Utils\HeadersGeneratorTrait;
+use GettextEasyRxCustom\Utils\CsvTrait;
 
 /**
  * Class to export translations to csv.

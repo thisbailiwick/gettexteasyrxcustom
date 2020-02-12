@@ -1,9 +1,9 @@
 <?php
 
-namespace Gettext\Generators;
+namespace GettextEasyRxCustom\Generators;
 
-use Gettext\Translations;
-use Gettext\Utils\MultidimensionalArrayTrait;
+use GettextEasyRxCustom\Translations;
+use GettextEasyRxCustom\Utils\MultidimensionalArrayTrait;
 
 class Json extends Generator implements GeneratorInterface
 {

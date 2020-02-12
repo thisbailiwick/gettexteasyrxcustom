@@ -1,6 +1,6 @@
 <?php
 
-namespace Gettext\Utils;
+namespace GettextEasyRxCustom\Utils;
 
 class StringReader
 {

@@ -81,7 +81,7 @@ Previous releases are documented in [github releases](https://github.com/oscarot
 
 ## [4.4.3] - 2017-08-09
 ### Fixed
-- Handle `NULL` arguments on extract entries in php. For example `dn__(null, 'singular', 'plural')`.
+- Handle `NULL` arguments on extract entries in php. For example `dn___(null, 'singular', 'plural')`.
 - Fixed the `PhpCode` and `JsCode` extractors that didn't extract `dn__` and `dngettext` entries [#155].
 - Fixed the `PhpCode` and `JsCode` extractors that didn't extract `dnpgettext` correctly.
 
@@ -100,7 +100,7 @@ Previous releases are documented in [github releases](https://github.com/oscarot
 ### Added
 - New option `noLocation` to po generator, to omit the references [#143]
 - New options `delimiter`, `enclosure` and `escape_char` to Csv and CsvDictionary extractors and generators [#145]
-- Added the missing `dn__()` function [#146]
+- Added the missing `dn___()` function [#146]
 
 ### Fixed
 - Improved the code style including php_codesniffer in development
@@ -109,7 +109,7 @@ Previous releases are documented in [github releases](https://github.com/oscarot
 ### Added
 - Added support for named placeholders (using `strtr`). For example:
   ```php
-  __('Hello :name', [':name' => 'World']);
+  ___('Hello :name', [':name' => 'World']);
   ```
 - Added support for Twig v2
 - New function `BaseTranslator::includeFunctions()` to include the functions file without register any translator

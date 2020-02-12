@@ -1,8 +1,8 @@
 <?php
 
-namespace Gettext\Utils;
+namespace GettextEasyRxCustom\Utils;
 
-use Gettext\Translations;
+use GettextEasyRxCustom\Translations;
 
 /**
  * Trait used by all generators that exports the translations to multidimensional arrays

@@ -1,8 +1,8 @@
 <?php
 
-namespace Gettext\Extractors;
+namespace GettextEasyRxCustom\Extractors;
 
-use Gettext\Translations;
+use GettextEasyRxCustom\Translations;
 
 interface ExtractorInterface
 {

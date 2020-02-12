@@ -1,10 +1,10 @@
 <?php
 
-namespace Gettext\Extractors;
+namespace GettextEasyRxCustom\Extractors;
 
 use Exception;
 use InvalidArgumentException;
-use Gettext\Translations;
+use GettextEasyRxCustom\Translations;
 
 abstract class Extractor implements ExtractorInterface
 {

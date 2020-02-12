@@ -1,9 +1,9 @@
 <?php
 
-namespace Gettext\Extractors;
+namespace GettextEasyRxCustom\Extractors;
 
-use Gettext\Translations;
-use Gettext\Utils\DictionaryTrait;
+use GettextEasyRxCustom\Translations;
+use GettextEasyRxCustom\Utils\DictionaryTrait;
 
 /**
  * Class to get gettext strings from plain json.

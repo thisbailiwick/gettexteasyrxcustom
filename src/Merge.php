@@ -1,6 +1,6 @@
 <?php
 
-namespace Gettext;
+namespace GettextEasyRxCustom;
 
 /**
  * Static class with merge contants.

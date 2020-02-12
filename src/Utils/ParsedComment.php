@@ -1,6 +1,6 @@
 <?php
 
-namespace Gettext\Utils;
+namespace GettextEasyRxCustom\Utils;
 
 /**
  * Comment parsed by PhpFunctionsScanner.

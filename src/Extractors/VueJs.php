@@ -1,15 +1,15 @@
 <?php
 /** @noinspection PhpComposerExtensionStubsInspection */
 
-namespace Gettext\Extractors;
+namespace GettextEasyRxCustom\Extractors;
 
 use DOMAttr;
 use DOMDocument;
 use DOMElement;
 use DOMNode;
 use Exception;
-use Gettext\Translations;
-use Gettext\Utils\FunctionsScanner;
+use GettextEasyRxCustom\Translations;
+use GettextEasyRxCustom\Utils\FunctionsScanner;
 
 /**
  * Class to get gettext strings from VueJS template files.
@@ -41,7 +41,7 @@ class VueJs extends Extractor implements ExtractorInterface, ExtractorMultiInter
         ],
     ];
 
-    protected static $functionsScannerClass = 'Gettext\Utils\JsFunctionsScanner';
+    protected static $functionsScannerClass = 'GettextEasyRxCustom\Utils\JsFunctionsScanner';
 
     /**
      * @inheritDoc
@@ -287,7 +287,7 @@ class VueJs extends Extractor implements ExtractorInterface, ExtractorMultiInter
 
     /**
      * Extract JS expressions from element attribute bindings (excluding text within elements)
-     * For example: <span :title="__('extract this')"> skip element content </span>
+     * For example: <span :title="___('extract this')"> skip element content </span>
      *
      * @param array $options
      * @param DOMNode $dom
@@ -376,7 +376,7 @@ class VueJs extends Extractor implements ExtractorInterface, ExtractorMultiInter
 
     /**
      * Extract JS expressions from within template elements (excluding attributes)
-     * For example: <span :title="skip attributes"> {{__("extract element content")}} </span>
+     * For example: <span :title="skip attributes"> {{___("extract element content")}} </span>
      *
      * @param DOMNode $dom
      * @return string JS code

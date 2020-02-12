@@ -1,8 +1,8 @@
 <?php
 
-namespace Gettext\Generators;
+namespace GettextEasyRxCustom\Generators;
 
-use Gettext\Translations;
+use GettextEasyRxCustom\Translations;
 
 interface GeneratorInterface
 {

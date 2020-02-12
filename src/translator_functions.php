@@ -1,6 +1,6 @@
 <?php
 
-use Gettext\BaseTranslator;
+use GettextEasyRxCustom\BaseTranslator;
 
 /**
  * Returns the translation of a string.
@@ -9,7 +9,7 @@ use Gettext\BaseTranslator;
  *
  * @return string
  */
-function __($original)
+function ___($original)
 {
     $text = BaseTranslator::$current->gettext($original);
 
@@ -29,7 +29,7 @@ function __($original)
  *
  * @return string
  */
-function noop__($original)
+function noop___($original)
 {
     return $original;
 }
@@ -43,7 +43,7 @@ function noop__($original)
  *
  * @return string
  */
-function n__($original, $plural, $value)
+function n___($original, $plural, $value)
 {
     $text = BaseTranslator::$current->ngettext($original, $plural, $value);
 
@@ -64,7 +64,7 @@ function n__($original, $plural, $value)
  *
  * @return string
  */
-function p__($context, $original)
+function p___($context, $original)
 {
     $text = BaseTranslator::$current->pgettext($context, $original);
 
@@ -85,7 +85,7 @@ function p__($context, $original)
  *
  * @return string
  */
-function d__($domain, $original)
+function d___($domain, $original)
 {
     $text = BaseTranslator::$current->dgettext($domain, $original);
 
@@ -107,7 +107,7 @@ function d__($domain, $original)
  *
  * @return string
  */
-function dp__($domain, $context, $original)
+function dp___($domain, $context, $original)
 {
     $text = BaseTranslator::$current->dpgettext($domain, $context, $original);
 
@@ -130,7 +130,7 @@ function dp__($domain, $context, $original)
  *
  * @return string
  */
-function dn__($domain, $original, $plural, $value)
+function dn___($domain, $original, $plural, $value)
 {
     $text = BaseTranslator::$current->dngettext($domain, $original, $plural, $value);
 
@@ -153,7 +153,7 @@ function dn__($domain, $original, $plural, $value)
  *
  * @return string
  */
-function np__($context, $original, $plural, $value)
+function np___($context, $original, $plural, $value)
 {
     $text = BaseTranslator::$current->npgettext($context, $original, $plural, $value);
 
@@ -177,7 +177,7 @@ function np__($context, $original, $plural, $value)
  *
  * @return string
  */
-function dnp__($domain, $context, $original, $plural, $value)
+function dnp___($domain, $context, $original, $plural, $value)
 {
     $text = BaseTranslator::$current->dnpgettext($domain, $context, $original, $plural, $value);
 

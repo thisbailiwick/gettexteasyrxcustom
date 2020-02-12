@@ -1,9 +1,9 @@
 <?php
 
-namespace Gettext\Generators;
+namespace GettextEasyRxCustom\Generators;
 
-use Gettext\Translation;
-use Gettext\Translations;
+use GettextEasyRxCustom\Translation;
+use GettextEasyRxCustom\Translations;
 use DOMDocument;
 
 class Xliff extends Generator implements GeneratorInterface

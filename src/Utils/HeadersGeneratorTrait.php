@@ -1,8 +1,8 @@
 <?php
 
-namespace Gettext\Utils;
+namespace GettextEasyRxCustom\Utils;
 
-use Gettext\Translations;
+use GettextEasyRxCustom\Translations;
 
 /**
  * Trait to provide the functionality of extracting headers.

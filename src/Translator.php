@@ -1,8 +1,8 @@
 <?php
 
-namespace Gettext;
+namespace GettextEasyRxCustom;
 
-use Gettext\Generators\PhpArray;
+use GettextEasyRxCustom\Generators\PhpArray;
 
 class Translator extends BaseTranslator implements TranslatorInterface
 {

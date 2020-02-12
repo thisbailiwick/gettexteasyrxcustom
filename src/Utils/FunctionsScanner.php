@@ -1,9 +1,9 @@
 <?php
 
-namespace Gettext\Utils;
+namespace GettextEasyRxCustom\Utils;
 
 use Exception;
-use Gettext\Translations;
+use GettextEasyRxCustom\Translations;
 
 abstract class FunctionsScanner
 {

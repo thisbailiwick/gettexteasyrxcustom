@@ -1,6 +1,6 @@
 <?php
 
-namespace Gettext;
+namespace GettextEasyRxCustom;
 
 /**
  * Class to manage a translation string.

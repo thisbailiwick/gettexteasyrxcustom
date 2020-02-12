@@ -1,8 +1,8 @@
 <?php
 
-namespace Gettext;
+namespace GettextEasyRxCustom;
 
-use Gettext\Languages\Language;
+use GettextEasyRxCustom\Languages\Language;
 use BadMethodCallException;
 use InvalidArgumentException;
 use ArrayObject;
@@ -131,7 +131,7 @@ class Translations extends ArrayObject
         $input = [],
         $flags = 0,
         $iterator_class = 'ArrayIterator',
-        $translationClass = 'Gettext\Translation'
+        $translationClass = 'GettextEasyRxCustom\Translation'
     ) {
         $this->headers = static::$options['defaultHeaders'];
 
@@ -175,7 +175,7 @@ class Translations extends ArrayObject
         }
 
         if ($matches[1] === 'addFrom') {
-            $extractor = 'Gettext\\Extractors\\'.$matches[2].'::from'.$matches[3];
+            $extractor = 'GettextEasyRxCustom\\Extractors\\'.$matches[2].'::from'.$matches[3];
             $source = array_shift($arguments);
             $options = array_shift($arguments) ?: [];
 
@@ -184,7 +184,7 @@ class Translations extends ArrayObject
             return $this;
         }
 
-        $generator = 'Gettext\\Generators\\'.$matches[2].'::to'.$matches[3];
+        $generator = 'GettextEasyRxCustom\\Generators\\'.$matches[2].'::to'.$matches[3];
 
         array_unshift($arguments, $this);
 
@@ -211,7 +211,7 @@ class Translations extends ArrayObject
      * @param mixed       $index
      * @param Translation $value
      *
-     * @throws InvalidArgumentException If the value is not an instance of Gettext\Translation
+     * @throws InvalidArgumentException If the value is not an instance of GettextEasyRxCustom\Translation
      *
      * @return Translation
      */
@@ -219,7 +219,7 @@ class Translations extends ArrayObject
     {
         if (!($value instanceof Translation)) {
             throw new InvalidArgumentException(
-                'Only instances of Gettext\\Translation must be added to a Gettext\\Translations'
+                'Only instances of GettextEasyRxCustom\\Translation must be added to a GettextEasyRxCustom\\Translations'
             );
         }
 

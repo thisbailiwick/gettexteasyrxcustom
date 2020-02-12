@@ -1,6 +1,6 @@
 <?php
 
-namespace Gettext;
+namespace GettextEasyRxCustom;
 
 abstract class BaseTranslator implements TranslatorInterface
 {

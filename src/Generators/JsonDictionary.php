@@ -1,9 +1,9 @@
 <?php
 
-namespace Gettext\Generators;
+namespace GettextEasyRxCustom\Generators;
 
-use Gettext\Translations;
-use Gettext\Utils\DictionaryTrait;
+use GettextEasyRxCustom\Translations;
+use GettextEasyRxCustom\Utils\DictionaryTrait;
 
 class JsonDictionary extends Generator implements GeneratorInterface
 {
