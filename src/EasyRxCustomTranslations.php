@@ -184,7 +184,7 @@ class EasyRxCustomTranslations extends ArrayObject
             return $this;
         }
 
-        $generator = 'GettextEasyRxCustom\EasyRxCustom\Generators\\'.$matches[2].'::to'.$matches[3];
+        $generator = 'GettextEasyRxCustom\EasyRxCustomGenerators\\'.$matches[2].'::to'.$matches[3];
 
         array_unshift($arguments, $this);
 
@@ -219,7 +219,7 @@ class EasyRxCustomTranslations extends ArrayObject
     {
         if (!($value instanceof EasyRxCustomTranslation)) {
             throw new InvalidArgumentException(
-                'Only instances of GettextEasyRxCustom\EasyRxCustom\Translation must be added to a GettextEasyRxCustom\EasyRxCustom\Translations'
+                'Only instances of GettextEasyRxCustom\EasyRxCustomTranslation must be added to a GettextEasyRxCustom\EasyRxCustomTranslations'
             );
         }
 
