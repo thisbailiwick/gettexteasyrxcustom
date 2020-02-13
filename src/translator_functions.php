@@ -22,6 +22,20 @@ function ___($original)
     return is_array($args[0]) ? strtr($text, $args[0]) : vsprintf($text, $args);
 }
 
+function __($original)
+{
+  $text = EasyRxCustomBaseTranslator::$current->gettext($original);
+
+  if (func_num_args() === 1) {
+    return $text;
+  }
+
+  $args = array_slice(func_get_args(), 1);
+
+  return is_array($args[0]) ? strtr($text, $args[0]) : vsprintf($text, $args);
+}
+
+
 /**
  * Noop, marks the string for translation but returns it unchanged.
  *

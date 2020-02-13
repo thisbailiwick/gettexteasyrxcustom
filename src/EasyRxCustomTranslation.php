@@ -5,7 +5,7 @@ namespace GettextEasyRxCustom;
 /**
  * Class to manage a translation string.
  */
-class Translation
+class EasyRxCustomTranslation
 {
     protected $id;
     protected $context;
