@@ -175,7 +175,7 @@ class EasyRxCustomTranslations extends ArrayObject
         }
 
         if ($matches[1] === 'addFrom') {
-            $extractor = 'GettextEasyRxCustom\EasyRxCustom\Extractors\\'.$matches[2].'::from'.$matches[3];
+            $extractor = 'GettextEasyRxCustom\EasyRxCustomExtractors\\'.$matches[2].'::from'.$matches[3];
             $source = array_shift($arguments);
             $options = array_shift($arguments) ?: [];
 
