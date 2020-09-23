@@ -136,7 +136,8 @@ class EasyRxCustomTranslations extends ArrayObject
         $this->headers = static::$options['defaultHeaders'];
 
         foreach (static::$options['defaultDateHeaders'] as $header) {
-            $this->headers[$header] = date('c');
+//            $this->headers[$header] = date('c');
+          $this->headers[$header] = '1979-01-30T01:30:00+08:00';
         }
 
         $this->headers[self::HEADER_LANGUAGE] = '';
